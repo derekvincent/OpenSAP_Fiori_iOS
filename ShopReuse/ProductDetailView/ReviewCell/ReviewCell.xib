@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewCell" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="authorLabel" destination="hNj-vL-UGQ" id="xMp-U5-GlH"/>
+                <outlet property="createdOnLabel" destination="4uD-uo-KvW" id="38V-Nl-FhA"/>
+                <outlet property="ratingStars" destination="ltm-kn-nct" id="jK1-QA-KS9"/>
+                <outlet property="reviewDescriptionLabel" destination="NoB-ex-gzk" id="tnZ-I3-s4J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNj-vL-UGQ">
+                    <rect key="frame" x="0.0" y="38" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-uo-KvW">
+                    <rect key="frame" x="91" y="15" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltm-kn-nct" customClass="RatingStars" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="16" width="75" height="16"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="cxb-Ce-zlD"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="IBW-lc-Itg">
+                    <rect key="frame" x="325" y="17" width="5.5" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="DAq-bt-PzS"/>
+                        <constraint firstAttribute="height" constant="12" id="uKB-er-0cU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoB-ex-gzk">
+                    <rect key="frame" x="0.0" y="56.5" width="317" height="61.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IBW-lc-Itg" secondAttribute="trailing" constant="8" id="2he-bl-b3i"/>
+                <constraint firstItem="4uD-uo-KvW" firstAttribute="leading" secondItem="ltm-kn-nct" secondAttribute="trailing" constant="16" id="7iR-CT-AlD"/>
+                <constraint firstAttribute="trailing" secondItem="NoB-ex-gzk" secondAttribute="trailing" constant="25" id="8Qn-RJ-uLJ"/>
+                <constraint firstItem="ltm-kn-nct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="CuT-Rd-24P"/>
+                <constraint firstItem="NoB-ex-gzk" firstAttribute="top" secondItem="hNj-vL-UGQ" secondAttribute="bottom" constant="0.5" id="Owi-8G-qHL"/>
+                <constraint firstItem="IBW-lc-Itg" firstAttribute="centerY" secondItem="4uD-uo-KvW" secondAttribute="centerY" id="Zte-47-C9m"/>
+                <constraint firstItem="ltm-kn-nct" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bmr-Ny-ZNA"/>
+                <constraint firstItem="hNj-vL-UGQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cqH-A5-JBR"/>
+                <constraint firstAttribute="bottom" secondItem="NoB-ex-gzk" secondAttribute="bottom" constant="16" id="hZd-g8-esM"/>
+                <constraint firstItem="IBW-lc-Itg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4uD-uo-KvW" secondAttribute="trailing" constant="16" id="lZU-Vf-zMv"/>
+                <constraint firstItem="4uD-uo-KvW" firstAttribute="centerY" secondItem="ltm-kn-nct" secondAttribute="centerY" id="nB0-Dk-OCj"/>
+                <constraint firstItem="hNj-vL-UGQ" firstAttribute="top" secondItem="ltm-kn-nct" secondAttribute="bottom" constant="6" id="sUN-48-lcd"/>
+                <constraint firstItem="NoB-ex-gzk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wgi-tu-Q7L"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-207" y="235"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Chevron" width="8" height="14"/>
+    </resources>
+</document>

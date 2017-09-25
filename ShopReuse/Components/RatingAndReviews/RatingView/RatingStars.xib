@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingStars" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="starsTextLabel" destination="ENF-xh-q1G" id="8Rb-Lx-6cS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="16"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★☆☆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENF-xh-q1G">
+                    <rect key="frame" x="0.0" y="0.0" width="73" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="g4H-aa-1VQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ENF-xh-q1G" secondAttribute="trailing" id="3an-aG-3jV"/>
+                <constraint firstItem="ENF-xh-q1G" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AbL-rD-ASW"/>
+                <constraint firstItem="ENF-xh-q1G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Eh2-H4-lUC"/>
+                <constraint firstItem="ENF-xh-q1G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HLI-DO-8Nv"/>
+                <constraint firstAttribute="bottom" secondItem="ENF-xh-q1G" secondAttribute="bottom" id="Nrj-xv-vjC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-114.5" y="-269.5"/>
+        </view>
+    </objects>
+</document>

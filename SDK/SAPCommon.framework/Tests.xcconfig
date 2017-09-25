@@ -1,0 +1,7 @@
+#include "Base.xcconfig"
+
+//
+// This config file is used for Foundation layer test targets in debug and release configuration.
+//
+// Test Targets
+//

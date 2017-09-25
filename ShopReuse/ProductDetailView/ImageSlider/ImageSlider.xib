@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageSlider" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="imagePageControl" destination="Pq9-M8-zRX" id="PxY-fg-2G0"/>
+                <outlet property="imageScrollView" destination="Mmk-yr-Sxh" id="RHG-TH-Cx3"/>
+                <outlet property="imageScrollViewContainer" destination="153-PI-T0w" id="tAr-lb-k1h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="585" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Pq9-M8-zRX">
+                    <rect key="frame" x="40" y="463" width="505" height="37"/>
+                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="153-PI-T0w">
+                    <rect key="frame" x="40" y="35" width="505" height="420"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmk-yr-Sxh">
+                            <rect key="frame" x="0.0" y="0.0" width="505" height="420"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Mmk-yr-Sxh" secondAttribute="bottom" id="QJU-ry-dh1"/>
+                        <constraint firstItem="Mmk-yr-Sxh" firstAttribute="top" secondItem="153-PI-T0w" secondAttribute="top" id="YfF-a7-lCc"/>
+                        <constraint firstAttribute="trailing" secondItem="Mmk-yr-Sxh" secondAttribute="trailing" id="dHy-HG-udg"/>
+                        <constraint firstItem="Mmk-yr-Sxh" firstAttribute="width" secondItem="153-PI-T0w" secondAttribute="width" id="mzi-rA-Q1E"/>
+                        <constraint firstItem="Mmk-yr-Sxh" firstAttribute="leading" secondItem="153-PI-T0w" secondAttribute="leading" id="pNj-aM-vgY"/>
+                        <constraint firstItem="Mmk-yr-Sxh" firstAttribute="height" secondItem="153-PI-T0w" secondAttribute="height" id="zHy-49-2Vq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pq9-M8-zRX" secondAttribute="trailing" constant="40" id="2Df-1F-SSf"/>
+                <constraint firstItem="Pq9-M8-zRX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="eqZ-r5-Fo9"/>
+                <constraint firstItem="153-PI-T0w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="gAs-Dd-J2S"/>
+                <constraint firstItem="Pq9-M8-zRX" firstAttribute="top" secondItem="153-PI-T0w" secondAttribute="bottom" constant="8" id="h6D-ed-LdW"/>
+                <constraint firstAttribute="bottom" secondItem="Pq9-M8-zRX" secondAttribute="bottom" id="jbk-xa-wVQ"/>
+                <constraint firstItem="153-PI-T0w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="nOF-hG-SV8"/>
+                <constraint firstAttribute="trailing" secondItem="153-PI-T0w" secondAttribute="trailing" constant="40" id="uiH-dZ-KsM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33" y="145"/>
+        </view>
+    </objects>
+</document>

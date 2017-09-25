@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="dataexposure.epmshop">
+			<EntityType Name="ShoppingCart">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Total" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2"/>
+				<Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5"/>
+				<Property Name="TotalQuantity" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="FormattedCustomerName" Type="Edm.String" Nullable="false" MaxLength="81"/>
+				<Property Name="FormattedAddress" Type="Edm.String" Nullable="false" MaxLength="129"/>
+				<Property Name="LogonName" Type="Edm.String" Nullable="false" MaxLength="255"/>
+				<NavigationProperty Name="ShoppingCartItems" Type="Collection(dataexposure.epmshop.ShoppingCartItem)"/>
+			</EntityType>
+			<EntityType Name="SubCategory">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="MainCategoryId" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="MainCategoryName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<NavigationProperty Name="MainCategory" Type="dataexposure.epmshop.MainCategory" Nullable="false"/>
+			</EntityType>
+			<EntityType Name="Product">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="13"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255"/>
+				<Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255"/>
+				<Property Name="DimensionUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="DimensionHeight" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3"/>
+				<Property Name="DimensionWidth" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3"/>
+				<Property Name="DimensionDepth" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3"/>
+				<Property Name="WeightUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="WeightMeasure" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3"/>
+				<Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2"/>
+				<Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5"/>
+				<Property Name="QuantityUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="MeasureUnit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="StockQuantity" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="AverageRating" Type="Edm.Decimal" Nullable="false" Precision="11" Scale="1"/>
+				<Property Name="RatingCount" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="SupplierId" Type="Edm.String" Nullable="false" MaxLength="13"/>
+				<Property Name="SupplierName" Type="Edm.String" Nullable="false" MaxLength="80"/>
+				<Property Name="SubCategoryId" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="SubCategoryName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="MainCategoryId" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="MainCategoryName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="LastModified" Type="Edm.DateTimeOffset" Nullable="false"/>
+				<Property Name="ReviewCount1" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="ReviewCount2" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="ReviewCount3" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="ReviewCount4" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="ReviewCount5" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="IsFavoriteOfCurrentUser" Type="Edm.Boolean" Nullable="false"/>
+				<Property Name="HasReviewOfCurrentUser" Type="Edm.Boolean" Nullable="false"/>
+				<NavigationProperty Name="SubCategory" Type="Collection(dataexposure.epmshop.SubCategory)"/>
+				<NavigationProperty Name="Supplier" Type="Collection(dataexposure.epmshop.Supplier)"/>
+				<NavigationProperty Name="Reviews" Type="Collection(dataexposure.epmshop.Review)"/>
+				<NavigationProperty Name="Images" Type="Collection(dataexposure.epmshop.Image)"/>
+				<NavigationProperty Name="PrimaryImage" Type="dataexposure.epmshop.Image"/>
+			</EntityType>
+			<EntityType Name="ShoppingCartItem">
+				<Key>
+					<PropertyRef Name="ShoppingCartId"/>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="ShoppingCartId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="ProductId" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="Quantity" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Unit" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="SubTotal" Type="Edm.Decimal" Nullable="false" Precision="26" Scale="2"/>
+				<Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5"/>
+				<NavigationProperty Name="Product" Type="dataexposure.epmshop.Product"/>
+			</EntityType>
+			<EntityType Name="Supplier">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="13"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="80"/>
+				<Property Name="Phone" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<Property Name="Email" Type="Edm.String" Nullable="false" MaxLength="255"/>
+				<Property Name="WebAddress" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="FormattedAddress" Type="Edm.String" Nullable="false" MaxLength="129"/>
+				<Property Name="FormattedContactName" Type="Edm.String" Nullable="false" MaxLength="81"/>
+				<Property Name="ContactPhone1" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<Property Name="ContactPhone2" Type="Edm.String" Nullable="false" MaxLength="30"/>
+				<Property Name="ContactEmail" Type="Edm.String" Nullable="false" MaxLength="255"/>
+			</EntityType>
+			<EntityType Name="Review">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="Comment" Type="Edm.String" Nullable="false" MaxLength="5000"/>
+				<Property Name="HelpfulCount" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="HelpfulForCurrentUser" Type="Edm.Boolean" Nullable="false"/>
+				<Property Name="ProductId" Type="Edm.String" Nullable="false" MaxLength="13"/>
+				<Property Name="Rating" Type="Edm.Decimal" Nullable="false" Precision="4" Scale="0"/>
+				<Property Name="ChangedAt" Type="Edm.DateTimeOffset" Nullable="false"/>
+				<Property Name="IsReviewOfCurrentUser" Type="Edm.Boolean" Nullable="false"/>
+				<Property Name="UserDisplayName" Type="Edm.String" Nullable="false" MaxLength="81"/>
+			</EntityType>
+			<EntityType Name="Image">
+				<Key>
+					<PropertyRef Name="ImageSet"/>
+					<PropertyRef Name="ImageId"/>
+				</Key>
+				<Property Name="ImageSet" Type="Edm.String" Nullable="false" MaxLength="13"/>
+				<Property Name="ImageId" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Data" Type="Edm.Stream"/>
+			</EntityType>
+			<EntityType Name="MainCategory">
+				<Key>
+					<PropertyRef Name="Id"/>
+				</Key>
+				<Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40"/>
+				<NavigationProperty Name="SubCategories" Type="Collection(dataexposure.epmshop.SubCategory)"/>
+			</EntityType>
+			<Action Name="AddProductToShoppingCart" IsBound="false">
+				<Parameter Name="ProductId" Type="Edm.String" Nullable="false"/>
+				<ReturnType Type="dataexposure.epmshop.ShoppingCartItem" Nullable="false"/>
+			</Action>
+			<Action Name="BuyShoppingCart" IsBound="false">
+				<ReturnType Type="dataexposure.epmshop.ShoppingCart" Nullable="false"/>
+			</Action>
+			<Action Name="ResetShop" IsBound="false">
+				<Parameter Name="CurrencyCode" Type="Edm.String" Nullable="false"/>
+			</Action>
+			<EntityContainer Name="EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17">
+				<EntitySet Name="ShoppingCart" EntityType="dataexposure.epmshop.ShoppingCart">
+					<NavigationPropertyBinding Path="ShoppingCartItems" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/ShoppingCartItem"/>
+				</EntitySet>
+				<EntitySet Name="SubCategory" EntityType="dataexposure.epmshop.SubCategory">
+					<NavigationPropertyBinding Path="MainCategory" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/MainCategory"/>
+				</EntitySet>
+				<EntitySet Name="Product" EntityType="dataexposure.epmshop.Product">
+					<NavigationPropertyBinding Path="SubCategory" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/SubCategory"/>
+					<NavigationPropertyBinding Path="Supplier" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/Supplier"/>
+					<NavigationPropertyBinding Path="Reviews" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/Review"/>
+					<NavigationPropertyBinding Path="Images" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/Image"/>
+					<NavigationPropertyBinding Path="PrimaryImage" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/Image"/>
+				</EntitySet>
+				<EntitySet Name="ShoppingCartItem" EntityType="dataexposure.epmshop.ShoppingCartItem">
+					<NavigationPropertyBinding Path="Product" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/Product"/>
+				</EntitySet>
+				<EntitySet Name="Supplier" EntityType="dataexposure.epmshop.Supplier"/>
+				<EntitySet Name="Review" EntityType="dataexposure.epmshop.Review"/>
+				<EntitySet Name="Image" EntityType="dataexposure.epmshop.Image"/>
+				<EntitySet Name="MainCategory" EntityType="dataexposure.epmshop.MainCategory">
+					<NavigationPropertyBinding Path="SubCategories" Target="dataexposure.epmshop.EntityContainer_52E5CAF81DF84C9CAEA930D6D6D51B17/SubCategory"/>
+				</EntitySet>
+				<ActionImport Name="AddProductToShoppingCart" Action="dataexposure.epmshop.AddProductToShoppingCart"/>
+				<ActionImport Name="BuyShoppingCart" Action="dataexposure.epmshop.BuyShoppingCart"/>
+				<ActionImport Name="ResetShop" Action="dataexposure.epmshop.ResetShop"/>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

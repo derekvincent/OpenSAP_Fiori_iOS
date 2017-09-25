@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingSummaryView" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="averageRatingLabel" destination="uxs-A2-mWS" id="7Sv-GS-Oso"/>
+                <outlet property="averageRatingStars" destination="fvy-y0-IZy" id="1r8-3k-dY2"/>
+                <outlet property="fiveStarDetail" destination="qKP-Y7-8uf" id="StX-pJ-sOx"/>
+                <outlet property="fourStarDetail" destination="YUt-oK-D0h" id="eoJ-ky-S8V"/>
+                <outlet property="numberOfRatingsLabel" destination="DFo-FQ-O2u" id="q6a-KI-phn"/>
+                <outlet property="oneStarDetail" destination="ZzX-yy-okv" id="M3A-qB-SS8"/>
+                <outlet property="threeStarDetail" destination="Kdy-Ch-i9t" id="hlE-YP-c0v"/>
+                <outlet property="twoStarDetail" destination="FZO-Un-5uA" id="O8q-Nu-561"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxs-A2-mWS">
+                    <rect key="frame" x="0.0" y="0.0" width="32.5" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-FQ-O2u">
+                    <rect key="frame" x="123.5" y="0.0" width="35.5" height="30"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-y0-IZy" customClass="RatingStars" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="40.5" y="8.5" width="75" height="16"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="ioJ-p5-9Fn"/>
+                        <constraint firstAttribute="height" constant="16" id="tRA-kk-ddF"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fillToStars">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKP-Y7-8uf" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="50" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ogM-aZ-vss"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fillToStars">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorOfStars">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorAmount">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-oK-D0h" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="70" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hKC-EK-cBU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorOfStars">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorAmount">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-Ch-i9t" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="90" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Z6q-Nc-qyc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorOfStars">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorAmount">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZO-Un-5uA" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="110" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="OV1-E2-7ZD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorOfStars">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorAmount">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzX-yy-okv" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="130" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="haL-Ok-ThY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfStars">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorOfStars">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorAmount">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qKP-Y7-8uf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6zt-bF-dZU"/>
+                <constraint firstItem="uxs-A2-mWS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9cG-Fn-i1z"/>
+                <constraint firstItem="fvy-y0-IZy" firstAttribute="leading" secondItem="uxs-A2-mWS" secondAttribute="trailing" constant="8" id="AO6-lW-clp"/>
+                <constraint firstAttribute="bottom" secondItem="ZzX-yy-okv" secondAttribute="bottom" id="BSm-1g-jde"/>
+                <constraint firstItem="DFo-FQ-O2u" firstAttribute="baseline" secondItem="uxs-A2-mWS" secondAttribute="baseline" id="DKS-kQ-AMx"/>
+                <constraint firstItem="ZzX-yy-okv" firstAttribute="top" secondItem="FZO-Un-5uA" secondAttribute="bottom" id="DQ7-j1-9kw"/>
+                <constraint firstItem="ZzX-yy-okv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="G8f-sS-37s"/>
+                <constraint firstItem="fvy-y0-IZy" firstAttribute="centerY" secondItem="uxs-A2-mWS" secondAttribute="centerY" id="KeR-9Z-0Db"/>
+                <constraint firstItem="uxs-A2-mWS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lba-fG-Abq"/>
+                <constraint firstAttribute="trailing" secondItem="YUt-oK-D0h" secondAttribute="trailing" id="M7F-eH-Je8"/>
+                <constraint firstAttribute="trailing" secondItem="ZzX-yy-okv" secondAttribute="trailing" id="Np2-2q-HBX"/>
+                <constraint firstItem="Kdy-Ch-i9t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OLn-0q-xJx"/>
+                <constraint firstItem="FZO-Un-5uA" firstAttribute="top" secondItem="Kdy-Ch-i9t" secondAttribute="bottom" id="OcE-An-RXq"/>
+                <constraint firstItem="FZO-Un-5uA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RcQ-wH-VkN"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DFo-FQ-O2u" secondAttribute="trailing" id="RpP-7b-tGD"/>
+                <constraint firstItem="qKP-Y7-8uf" firstAttribute="top" secondItem="DFo-FQ-O2u" secondAttribute="bottom" constant="20" id="WRM-FJ-CBk"/>
+                <constraint firstAttribute="trailing" secondItem="FZO-Un-5uA" secondAttribute="trailing" id="YIN-VC-ZCs"/>
+                <constraint firstItem="YUt-oK-D0h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="anT-97-AiZ"/>
+                <constraint firstItem="DFo-FQ-O2u" firstAttribute="leading" secondItem="fvy-y0-IZy" secondAttribute="trailing" constant="8" id="bxS-4E-i9e"/>
+                <constraint firstItem="Kdy-Ch-i9t" firstAttribute="top" secondItem="YUt-oK-D0h" secondAttribute="bottom" id="eCL-vH-AtY"/>
+                <constraint firstAttribute="trailing" secondItem="Kdy-Ch-i9t" secondAttribute="trailing" id="eCP-Lq-Ra4"/>
+                <constraint firstItem="DFo-FQ-O2u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nZi-hs-49g"/>
+                <constraint firstAttribute="trailing" secondItem="qKP-Y7-8uf" secondAttribute="trailing" id="pqy-hZ-Ada"/>
+                <constraint firstItem="YUt-oK-D0h" firstAttribute="top" secondItem="qKP-Y7-8uf" secondAttribute="bottom" id="qqC-U7-KvQ"/>
+                <constraint firstItem="fvy-y0-IZy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="sff-uY-5Kh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="0.5" y="-59"/>
+        </view>
+    </objects>
+</document>

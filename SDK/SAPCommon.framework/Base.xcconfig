@@ -1,0 +1,28 @@
+//
+// This config file is included in all other config files for framework projects in the Foundation and Model layer.
+//
+// All Targets
+
+// build all architectures (32, 64bit, armv7...) depending on the current configuration like iphoneos or iphonesimulator
+ONLY_ACTIVE_ARCH = NO;
+
+ENABLE_BITCODE = YES; // may cause problems with nested frameworks; all third-party frameworks need bitcode
+
+IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+
+// Runpath Search Path
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks;
+
+FRAMEWORK_SEARCH_PATHS = $(TARGET_BUILD_DIR);
+
+// Base SDK = Latest iOS
+SDKROOT = iphoneos;
+
+// Sign with "iPhone Developer"
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer;
+
+// Sign with "Don't Code Sign"
+//CODE_SIGN_IDENTITY[sdk=iphoneos*] =
+
+// support iphone only; 1: iphone, 2: ipad, 4: applewatch
+TARGETED_DEVICE_FAMILY = 1;

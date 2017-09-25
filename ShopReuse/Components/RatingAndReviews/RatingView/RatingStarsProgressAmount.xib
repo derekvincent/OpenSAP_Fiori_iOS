@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingStarsProgressAmount" customModule="Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="amountTextLabel" destination="vJg-l0-9Eb" id="wyR-YV-jcN"/>
+                <outlet property="progressView" destination="xHd-r7-sLt" id="Bnh-sz-yiK"/>
+                <outlet property="starsControl" destination="BWz-F4-2Fm" id="69F-Sx-OWz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWz-F4-2Fm" customClass="RatingStars" customModule="Shop" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="2" width="75" height="16"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="YI2-04-3qn"/>
+                    </constraints>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-r7-sLt">
+                    <rect key="frame" x="89" y="9" width="224" height="2"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="224" id="cIo-4S-IAD"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJg-l0-9Eb">
+                    <rect key="frame" x="324.5" y="1.5" width="18.5" height="18"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BWz-F4-2Fm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5zm-wz-JxE"/>
+                <constraint firstItem="xHd-r7-sLt" firstAttribute="leading" secondItem="BWz-F4-2Fm" secondAttribute="trailing" constant="14" id="GTb-gJ-hpC"/>
+                <constraint firstItem="xHd-r7-sLt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JPZ-z1-GyL"/>
+                <constraint firstItem="vJg-l0-9Eb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="X15-90-LC2"/>
+                <constraint firstAttribute="trailing" secondItem="vJg-l0-9Eb" secondAttribute="trailing" id="b2T-oS-WXC"/>
+                <constraint firstItem="BWz-F4-2Fm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ckq-Bz-d6O"/>
+                <constraint firstItem="vJg-l0-9Eb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xHd-r7-sLt" secondAttribute="trailing" id="js9-Ou-8JP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-131.5" y="-319"/>
+        </view>
+    </objects>
+</document>

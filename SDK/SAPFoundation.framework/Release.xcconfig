@@ -1,0 +1,14 @@
+#include "Base.xcconfig"
+
+//
+// This config file is used for Foundation layer framework targets in the release configuration.
+//
+// Framework Targets
+//
+
+// Framework should include internal declarations for @testable import
+ENABLE_TESTABILITY = NO;
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym;
+
+SWIFT_OPTIMIZATION_LEVEL = -Owholemodule

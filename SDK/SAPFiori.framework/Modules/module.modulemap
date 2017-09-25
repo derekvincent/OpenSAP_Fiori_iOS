@@ -1,0 +1,47 @@
+framework module SAPFiori {
+    
+    umbrella header "SAPFiori.h"
+    
+    header "SZTextView.h"
+    // Add folloing line when supporting recording attachment
+    // header "SCSiriWaveformView.h"
+
+    //CoreParse
+    //header "CoreParse.h"
+
+    //The following gets rid of the warnings related to CoreParse:
+    //Umbrella header for module 'SAPFiori' does not include CoreParse headers:
+    header "CPEOFToken.h"
+    header "CPErrorToken.h"
+    header "CPGrammarInternal.h"
+    header "CPGrammarPrivate.h"
+    header "CPIdentifierToken.h"
+    header "CPItem.h"
+    header "CPJSONParser.h"
+    header "CPLR1Item.h"
+    header "CPNumberRecogniser.h"
+    header "CPNumberToken.h"
+    header "CPQuotedToken.h"
+    header "CPRegexpRecogniser.h"
+    header "CPRHSItem+Private.h"
+    header "CPRHSitem.h"
+    header "CPRHSItemResult.h"
+    header "CPRule+Internal.h"
+    header "CPSLRParser.h"
+    header "CPShiftAction.h"
+    header "CPShiftReduceAction.h"
+    header "CPShiftReduceActionTable.h"
+    header "CPShiftReduceGotoTable.h"
+    header "CPShiftReduceState.h"
+    header "CPWhiteSpaceToken.h"
+    header "CPShiftReduceParserProtectedMethods.h"
+    header "NSArray+Functional.h"
+    header "NSSetFunctional.h"
+
+    export *
+    module * { export * }
+}
+
+module SAPFiori.Swift {
+    header "SAPFiori-Swift.h"
+}
